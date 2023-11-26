@@ -34,6 +34,7 @@
 # dracula-gtk-theme: the Dracula theme, it fits the overall look and feel
 # dracula-icons-git" set of icons to go with the Dracula theme
 # xdg-desktop-portal-hyprland: xdg-desktop-portal backend for hyprland
+# add jetbrains nerd font
 
 #### Check for yay ####
 ISYAY=/sbin/yay
@@ -74,6 +75,9 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     echo -e "Starting the Bluetooth Service...\n"
     sudo systemctl enable --now bluetooth.service
     sleep 2
+
+    # jetbrains nerd font 
+    sudo pacman -S ttf-jetbrains-mono-nerd 
     
     # Clean out other portals
     echo -e "Cleaning out conflicting xdg portals...\n"
